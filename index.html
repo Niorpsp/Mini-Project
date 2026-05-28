@@ -1,51 +1,134 @@
-<!doctype html>
+ <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Testimonial & Trial Section</title>
+    <title>Hrrd : Service Monitor</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- link css -->
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body class="min-h-screen bg-slate-100 text-slate-900">
-   <!-- Best -->
-    <section class="hero-section bg-gradient-to-b from-[#FFEDE7] to-white min-h-screen">
-      <nav class="nav-bar w-full bg-[#FFF0EA] flex flex-row items-center justify-between p-8 px-60">
-        <div class="flex gap-40">
-          <section class="Logo-Hrrd flex flex-row items-center gap-2">
-            <img src="/image/Logo1.png" alt="Logo-image"/>
-            <img src="/image/Logo2.png" alt="Logo-name"/>
+  <body class="font-dm text-[var(--text-dark)]">
+    <section
+      class="flex min-h-screen min-h-[100dvh] flex-col bg-gradient-to-b from-[var(--hero-gradient-start)] to-white md:max-h-[960px] md:min-h-[960px] md:overflow-hidden"
+    >
+      <!-- Navigation -->
+      <nav
+        class="flex items-center bg-[var(--nav-bg)] px-5 py-5 sm:px-8 md:px-[150px] md:py-8"
+      >
+        <div class="flex items-center md:gap-40">
+          <section class="flex flex-row items-center gap-2">
+            <img
+              src="image/Logo1.png"
+              alt="Logo-image"
+              class="h-8 w-auto object-contain md:h-auto"
+            />
+            <img
+              src="image/Logo2.png"
+              alt="Logo-name"
+              class="h-5 w-auto object-contain md:h-auto"
+            />
           </section>
-          <section class="nav-button flex gap-10">
-            <button>Home</button>
-            <button>Feature</button>
-            <button>Pricing</button>
-            <button>Testimotional</button>
+
+          <section class="hidden gap-10 md:flex">
+          <button
+            type="button"
+            class="text-lg font-semibold text-[var(--primary-color)] transition-colors duration-200"
+          >
+            Home
+          </button>
+          <button
+            type="button"
+            class="text-lg text-[var(--text-muted)] transition-colors duration-200 hover:text-[var(--primary-color)]"
+          >
+            Feature
+          </button>
+          <button
+            type="button"
+            class="text-lg text-[var(--text-muted)] transition-colors duration-200 hover:text-[var(--primary-color)]"
+          >
+            Pricing
+          </button>
+          <button
+            type="button"
+            class="text-lg text-[var(--text-muted)] transition-colors duration-200 hover:text-[var(--primary-color)]"
+          >
+            Testimonial
+          </button>
           </section>
         </div>
-        <section class="register-signin flex gap-4">
-          <button class="bg-[--secondary-color] w-[151px] h-[64px] rounded-md">Register</button>
-          <button class="bg-[--primary-color] text-white w-[139px] h-[64px] rounded-md">Sign In</button>
+
+        <button type="button" class="ml-auto p-1 md:hidden" aria-label="Open menu">
+          <svg class="h-8 w-8 text-slate-800" fill="currentColor" viewBox="0 0 24 24">
+            <path
+              d="M4 4h4v4H4zm6 0h4v4h-4zm6 0h4v4h-4zM4 10h4v4H4zm6 0h4v4h-4zm6 0h4v4h-4zM4 16h4v4H4zm6 0h4v4h-4zm6 0h4v4h-4z"
+            />
+          </svg>
+        </button>
+
+        <section class="ml-auto hidden items-center gap-4 md:flex">
+          <button
+            type="button"
+            class="h-16 w-[151px] rounded-md bg-[var(--secondary-color)] text-base font-bold text-[var(--text-dark)]"
+          >
+            Register
+          </button>
+          <button
+            type="button"
+            class="h-16 w-[139px] rounded-md bg-[var(--primary-color)] text-base font-bold text-white"
+          >
+            Sign In
+          </button>
         </section>
       </nav>
-      <main>
-        <section>
-          <div>
-            <p>Best Platform</p>
-            <p>for Monitor</p>
-            <p>Work Flow</p>
-          </div>
-          <button>Get 15 Day Trial</button>
-          <div class="flex flex-row items-center gap-10">
-            <img src="/image/brand-04.png">
-            <img src="/image/brand-01.png">
-            <img src="/image/brand-06.png">
-            <img src="/image/brand-05.png">
-          </div>
-        </section>
-        <section>
 
+      <!-- Hero -->
+      <main
+        class="grid flex-1 grid-cols-1 content-center gap-8 px-5 pb-10 pt-4 sm:px-8 md:mx-auto md:w-full md:max-w-[1920px] md:grid-cols-[minmax(0,620px)_minmax(0,1fr)] md:grid-rows-1 md:items-center md:gap-12 md:px-[150px] md:pb-16 md:pt-0"
+      >
+        <!-- Dashboard (mobile: บน | desktop: ขวา) -->
+        <div
+          class="ml-[-12px] w-full max-w-full justify-self-start md:col-start-2 md:row-start-1 md:w-auto md:justify-self-end"
+        >
+          <img
+            src="image/Group 5880.png"
+            alt="dashboard"
+            class="block h-auto w-full max-w-full object-contain object-left md:max-w-[1000px] md:w-[min(1000px,calc(100vw-300px-420px))] md:object-center"
+            width="1000"
+            height="732"
+          />
+        </div>
+
+        <!-- Headline, CTA, brands -->
+        <section
+          class="flex w-full max-w-full flex-col items-start gap-6 text-left md:col-start-1 md:row-start-1 md:gap-10"
+        >
+          <h1
+            class="font-circular text-[36px] font-bold leading-[1.1] text-slate-800 sm:text-[44px] md:text-[64px] lg:text-[70px]"
+          >
+            <span class="block">Best Platform</span>
+            <span class="block">for Monitor</span>
+            <span class="block">Work Flow</span>
+          </h1>
+
+          <button
+            type="button"
+            class="h-14 w-[206px] rounded-md bg-[var(--primary-color)] text-base font-bold text-white shadow-lg shadow-orange-500/25 transition-transform hover:scale-105 md:h-16"
+          >
+            Get 15 Day Trial
+          </button>
+
+          <div
+            class="grid w-full max-w-[280px] grid-cols-2 justify-items-start gap-x-8 gap-y-8 pt-2 opacity-70 sm:max-w-[300px] md:flex md:max-w-none md:flex-row md:items-center md:justify-start md:gap-10 md:pt-4 lg:gap-[40px]"
+          >
+            <img src="image/brand-04.png" alt="Caley Peace" class="h-7 object-contain sm:h-8" />
+            <img src="image/brand-01.png" alt="Design Studio" class="h-7 object-contain sm:h-8" />
+            <img
+              src="image/brand-06.png"
+              alt="Harrison In9dustry"
+              class="h-7 object-contain sm:h-8"
+            />
+            <img src="image/brand-05.png" alt="Barbecue" class="h-7 object-contain sm:h-8" />
+          </div>
         </section>
       </main>
     </section>
