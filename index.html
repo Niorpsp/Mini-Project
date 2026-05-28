@@ -3,34 +3,93 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tailwind Play CDN Example</title>
+    <title>Testimonial & Trial Section</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- link css -->
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body class="min-h-screen bg-slate-100 text-slate-900">
-   <!-- Best -->
-    <section>
+  <body class="min-h-screen bg-[#f3f3f3] text-[#2f2f2f]">
+    <main class="mx-auto w-full max-w-[1700px] px-4 py-8 sm:py-10 md:px-6 md:py-14 lg:px-8 xl:px-10">
+      
+      <section
+        class="flex flex-col-reverse items-start gap-8 md:flex-row md:items-center md:justify-between md:gap-12 lg:gap-24"
+        aria-label="Testimonial"
+      >
+        <div class="flex w-full max-w-[695px] flex-col gap-6 md:gap-8">
+          
+          <p
+            class="font-heading text-[22px] sm:text-[26px] md:text-[30px] lg:text-[32px] font-black leading-snug md:leading-[1.3] tracking-normal text-[#3B3B3B] w-full"
+          >
+            “I’ve downloaded Hrrd from my Google Play about 1 years ago. This
+            make the prototype process so easy and faster. I feel this is the
+            best apps for Prototyping use”
+          </p>
+          
+          <p class="font-body font-normal text-[15px] sm:text-[17px] md:text-[18px] leading-none tracking-normal text-[#5A7184]">
+            — Ferdinand - Co Founder of CocoPay
+          </p>
 
-    </section>>
-    <!-- Jib -->
-    <section>
+          <div class="flex items-center gap-6 pt-2" aria-label="Slide controls">
+            <button
+              type="button"
+              class="transition hover:opacity-70 active:scale-95 focus:outline-none"
+              aria-label="Previous testimonial"
+            >
+              <svg width="49" height="32" viewBox="0 0 49 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M49.0031 15.7522C49.0031 15.2881 48.8188 14.843 48.4906 14.5148C48.1624 14.1866 47.7173 14.0022 47.2531 14.0022H5.97763L16.9921 2.99121C17.1548 2.8285 17.2839 2.63534 17.372 2.42275C17.46 2.21017 17.5053 1.98231 17.5053 1.75221C17.5053 1.52211 17.46 1.29426 17.372 1.08167C17.2839 0.869081 17.1548 0.675918 16.9921 0.51321C16.8294 0.350502 16.6363 0.221436 16.4237 0.133379C16.2111 0.0453224 15.9832 0 15.7531 0C15.523 0 15.2952 0.0453224 15.0826 0.133379C14.87 0.221436 14.6768 0.350502 14.5141 0.51321L0.514128 14.5132C0.351157 14.6758 0.221857 14.8689 0.133634 15.0815C0.0454118 15.2941 0 15.522 0 15.7522C0 15.9824 0.0454118 16.2103 0.133634 16.4229C0.221857 16.6355 0.351157 16.8286 0.514128 16.9912L14.5141 30.9912C14.6768 31.1539 14.87 31.283 15.0826 31.371C15.2952 31.4591 15.523 31.5044 15.7531 31.5044C15.9832 31.5044 16.2111 31.4591 16.4237 31.371C16.6363 31.283 16.8294 31.1539 16.9921 30.9912C17.1548 30.8285 17.2839 30.6353 17.372 30.4228C17.46 30.2102 17.5053 29.9823 17.5053 29.7522C17.5053 29.5221 17.46 29.2943 17.372 29.0817C17.2839 28.8691 17.1548 28.6759 16.9921 28.5132L5.97763 17.5022H47.2531C47.7173 17.5022 48.1624 17.3178 48.4906 16.9896C48.8188 16.6615 49.0031 16.2163 49.0031 15.7522Z" fill="#FF7342"/>
+              </svg>
+            </button>
+            <button
+              type="button"
+              class="transition hover:opacity-70 active:scale-95 focus:outline-none"
+              aria-label="Next testimonial"
+            >
+              <svg width="35" height="23" viewBox="0 0 35 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M2.28882e-05 11.2516C2.28882e-05 10.9201 0.131718 10.6021 0.366138 10.3677C0.600559 10.1333 0.918503 10.0016 1.25002 10.0016H30.7325L22.865 2.13658C22.7488 2.02036 22.6566 1.88239 22.5937 1.73054C22.5308 1.57869 22.4984 1.41594 22.4984 1.25158C22.4984 1.08722 22.5308 0.924469 22.5937 0.77262C22.6566 0.620772 22.7488 0.482799 22.865 0.366579C22.9812 0.250359 23.1192 0.158169 23.2711 0.0952709C23.4229 0.0323731 23.5857 0 23.75 0C23.9144 0 24.0771 0.0323731 24.229 0.0952709C24.3808 0.158169 24.5188 0.250359 24.635 0.366579L34.635 10.3666C34.7514 10.4827 34.8438 10.6206 34.9068 10.7725C34.9698 10.9244 35.0023 11.0872 35.0023 11.2516C35.0023 11.416 34.9698 11.5788 34.9068 11.7307C34.8438 11.8825 34.7514 12.0205 34.635 12.1366L24.635 22.1366C24.5188 22.2528 24.3808 22.345 24.229 22.4079C24.0771 22.4708 23.9144 22.5032 23.75 22.5032C23.5857 22.5032 23.4229 22.4708 23.2711 22.4079C23.1192 22.345 22.9812 22.2528 22.865 22.1366C22.7488 22.0204 22.6566 21.8824 22.5937 21.7305C22.5308 21.5787 22.4984 21.4159 22.4984 21.2516C22.4984 21.0872 22.5308 20.9245 22.5937 20.7726C22.6566 20.6208 22.7488 20.4828 22.865 20.3666L30.7325 12.5016H1.25002C0.918503 12.5016 0.600559 12.3699 0.366138 12.1355C0.131718 11.901 2.28882e-05 11.5831 2.28882e-05 11.2516Z" fill="#3B3B3B"/>
+              </svg>
+            </button>
+          </div>
+        </div>
 
-    </section>>
-    <!-- Pond -->
-    <section>
+        <div class="mx-auto w-full max-w-[320px] sm:max-w-[430px] md:mx-0 md:max-w-[620px] lg:max-w-[680px]">
+          <svg class="w-full h-auto" viewBox="0 0 774 716" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="341.716" cy="341.716" r="341.216" transform="matrix(-1 -8.74228e-08 -8.74228e-08 1 683.431 6.76085e-05)" stroke="#37E0F5"/>
+            <circle cx="341.716" cy="341.716" r="341.216" transform="matrix(-1 -8.74228e-08 -8.74228e-08 1 773.351 25.7916)" stroke="#37E0F5"/>
+            <circle cx="349.927" cy="384.223" r="325" fill="#37E0F5"/>
+            <path d="M261.451 671.723H245.826V659.223C245.826 652.387 251.295 646.723 258.326 646.723H259.889C262.428 646.723 264.576 644.77 264.576 642.035V632.66C264.576 630.121 262.428 627.973 259.889 627.973H258.326C240.943 627.973 227.076 642.035 227.076 659.223V706.098C227.076 711.371 231.178 715.473 236.451 715.473H261.451C266.529 715.473 270.826 711.371 270.826 706.098V681.098C270.826 676.02 266.529 671.723 261.451 671.723ZM205.201 671.723H189.576V659.223C189.576 652.387 195.045 646.723 202.076 646.723H203.639C206.178 646.723 208.326 644.77 208.326 642.035V632.66C208.326 630.121 206.178 627.973 203.639 627.973H202.076C184.693 627.973 170.826 642.035 170.826 659.223V706.098C170.826 711.371 174.928 715.473 180.201 715.473H205.201C210.279 715.473 214.576 711.371 214.576 706.098V681.098C214.576 676.02 210.279 671.723 205.201 671.723Z" fill="#3B3B3B"/>
+          </svg>
+        </div>
+      </section>
 
+      <section
+        class="mx-auto mt-14 flex w-full max-w-[1420px] min-h-[420px] flex-col justify-center items-center rounded-[10px] bg-[#6999e8] px-4 py-12 text-center text-white"
+        aria-label="Free trial form"
+      >
+        <h2 class="font-heading text-[28px] sm:text-[38px] md:text-[48px] font-black leading-tight md:leading-[58px] tracking-normal">
+        Start Your <span class="bg-white/20 pl-2.5 pr-0.5 py-0.5 rounded-[4px] inline-block">15 Days Fr</span>ee Trial!
+        </h2>
+        <p class="mt-3 text-center font-body font-normal text-[14px] md:text-[16px] leading-relaxed md:leading-[32px] tracking-normal max-w-[290px] sm:max-w-none">
+          Distinctively supply accurate methods of empowerment before.
+        </p>
 
-    </section>>
-    <!-- Tar -->
-    <section>
-
-
-    </section>>
-    <!-- Junior -->
-    <section>
-
-
-    </section>>
+        <form
+          class="mx-auto mt-8 flex w-full max-w-[574px] h-[70px] md:h-[100px] items-center justify-between rounded-[10px] bg-white p-2 md:p-4"
+        >
+          <label for="email" class="sr-only">Email</label>
+          <input
+            id="email"
+            type="email"
+            placeholder="Email"
+            class="font-body h-full w-full px-2 md:px-3 text-sm md:text-base text-[#4b5563] placeholder:text-[#9ca3af] focus:outline-none"
+          />
+          <button
+            type="submit"
+            class="font-body w-[125px] h-[54px] sm:w-[168px] sm:h-[64px] shrink-0 rounded-[4px] bg-[#ff6f3d] text-xs sm:text-sm font-semibold text-white transition hover:bg-[#f16230] focus:outline-none flex items-center justify-center"
+          >
+            Submit Now
+          </button>
+        </form>
+      </section>
+    </main>
   </body>
 </html>
