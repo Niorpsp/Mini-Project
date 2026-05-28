@@ -1,15 +1,28 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 :root {
-    /* Colors */
-    --primary-color: #FF7342;
-    --secondary-color: #FFE5A3;
+  --primary-color: #ff7342;
+  --secondary-color: #ffe5a3;
+  --nav-bg: #fff0ea;
+  --text-dark: #1e293b;
+  --text-muted: #64748b;
+  --hero-gradient-start: #ffede7;
+}
 
-    /* Fonts */
-    --font-heading: 'Circular Std', sans-serif;
-    --font-body: 'DM Sans', sans-serif;
+@font-face {
+  font-family: "DM Sans";
+  src: url("./fonts/DMSans-VariableFont_opsz,wght.ttf") format("truetype-variations");
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Circular Std";
+  src: url("./fonts/circular-std-medium-500.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
 }
