@@ -26,3 +26,8 @@
   font-weight: 500;
   font-style: normal;
 }
+@media (min-width: 1920px) {
+  .fix-with-media {
+    width: 70%;
+  }
+}
