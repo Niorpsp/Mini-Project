@@ -364,7 +364,7 @@
           class="grid grid-cols-1 gap-x-1 gap-y-2 sm:grid-cols-3 md:grid-cols-5 max-w-xs sm:max-w-4xl mx-auto"
         >
           <div
-            class="flex items-center justify-center rounded-xl bg-white p-5 shadow-xl border border-slate-100 font-semibold text-slate-400"
+            class="flex items-center justify-center rounded-xl bg-white sm:p-5 p-10 shadow-xl border border-slate-100 font-semibold text-slate-400"
           >
             <img
               src="image_pricing_section/slack.png"
@@ -373,7 +373,7 @@
             />
           </div>
           <div
-            class="flex items-center justify-center rounded-xl bg-white p-5 shadow-xl border border-slate-100 font-black tracking-wider text-slate-300"
+            class="flex items-center justify-center rounded-xl bg-white sm:p-5 p-10 shadow-xl border border-slate-100 font-black tracking-wider text-slate-300"
           >
             <img
               src="image_pricing_section/Netflix.png"
@@ -383,7 +383,7 @@
           </div>
 
           <div
-            class="flex items-center justify-center rounded-xl bg-[rgb(255,115,66)] p-5 shadow-[0_4px_14px_rgba(255,115,66,0.4)] font-bold text-white"
+            class="flex items-center justify-center rounded-xl bg-[rgb(255,115,66)] sm:p-5 p-10 shadow-[0_4px_14px_rgba(255,115,66,0.4)] font-bold text-white"
           >
             <img
               src="image_pricing_section/google_highlight.png"
@@ -393,7 +393,7 @@
           </div>
 
           <div
-            class="flex items-center justify-center rounded-xl bg-white p-5 shadow-xl border border-slate-100 font-medium text-slate-400"
+            class="flex items-center justify-center rounded-xl bg-white sm:p-5 p-10 shadow-xl border border-slate-100 font-medium text-slate-400"
           >
             <img
               src="image_pricing_section/fitbit.png"
@@ -402,7 +402,7 @@
             />
           </div>
           <div
-            class="flex items-center justify-center rounded-xl bg-white p-5 shadow-xl border border-slate-100 font-medium text-slate-400"
+            class="flex items-center justify-center rounded-xl bg-white sm:p-5 p-10 shadow-xl border border-slate-100 font-medium text-slate-400"
           >
             <img
               src="image_pricing_section/aitbnb.png"
@@ -411,7 +411,7 @@
             />
           </div>
           <div
-            class="flex items-center justify-center rounded-xl bg-white p-5 shadow-xl border border-slate-100 font-medium text-slate-400"
+            class="flex items-center justify-center rounded-xl bg-white sm:p-5 p-10 shadow-xl border border-slate-100 font-medium text-slate-400"
           >
             <img
               src="image_pricing_section/aitbnb.png"
@@ -420,7 +420,7 @@
             />
           </div>
           <div
-            class="flex items-center justify-center rounded-xl bg-white p-5 shadow-xl border border-slate-100 font-medium text-slate-400"
+            class="flex items-center justify-center rounded-xl bg-white sm:p-5 p-10 shadow-xl border border-slate-100 font-medium text-slate-400"
           >
             <img
               src="image_pricing_section/fitbit.png"
@@ -429,7 +429,7 @@
             />
           </div>
           <div
-            class="flex items-center justify-center rounded-xl bg-white p-5 shadow-xl border border-slate-100 font-black tracking-wider text-slate-300"
+            class="flex items-center justify-center rounded-xl bg-white sm:p-5 p-10 shadow-xl border border-slate-100 font-black tracking-wider text-slate-300"
           >
             <img
               src="image_pricing_section/Netflix.png"
@@ -438,7 +438,7 @@
             />
           </div>
           <div
-            class="flex items-center justify-center rounded-xl bg-white p-5 shadow-xl border border-slate-100 font-semibold text-slate-400"
+            class="flex items-center justify-center rounded-xl bg-white sm:p-5 p-10 shadow-xl border border-slate-100 font-semibold text-slate-400"
           >
             <img
               src="image_pricing_section/slack.png"
@@ -447,7 +447,7 @@
             />
           </div>
           <div
-            class="flex items-center justify-center rounded-xl bg-white p-5 shadow-xl border border-slate-100 font-bold text-slate-300"
+            class="flex items-center justify-center rounded-xl bg-white sm:p-5 p-10 shadow-xl border border-slate-100 font-bold text-slate-300"
           >
             <img
               src="image_pricing_section/Google.png"
@@ -530,7 +530,7 @@
           class="grid grid-cols-1 gap-8 items-stretch max-w-md mx-auto md:max-w-none md:grid-cols-3"
         >
           <article
-            class="flex flex-col justify-between rounded-2xl bg-white p-8 shadow-sm border border-slate-100 text-left transition hover:shadow-md"
+            class="flex flex-col justify-between rounded-2xl bg-white p-8 sm:shadow-sm shadow-xl border border-slate-100 text-left transition hover:shadow-md"
           >
             <div>
               <h3 class="text-lg font-bold text-slate-900 mb-2">Free Plan</h3>
@@ -578,7 +578,7 @@
           </article>
 
           <article
-            class="flex flex-col justify-between rounded-2xl bg-white p-8 shadow-xl ring-1 ring-black/5 text-left transform md:-translate-y-4 z-10"
+            class="flex flex-col justify-between rounded-2xl bg-white p-8 shadow-xl  ring-1 ring-black/5 text-left transform md:-translate-y-4 z-10"
           >
             <div>
               <h3 class="text-lg font-bold text-slate-900 mb-2">
@@ -628,7 +628,7 @@
           </article>
 
           <article
-            class="flex flex-col justify-between rounded-2xl bg-white p-8 shadow-sm border border-slate-100 text-left transition hover:shadow-md"
+            class="flex flex-col justify-between rounded-2xl bg-white p-8 sm:shadow-sm shadow-xl border border-slate-100 text-left transition hover:shadow-md"
           >
             <div>
               <h3 class="text-lg font-bold text-slate-900 mb-2">
@@ -953,9 +953,14 @@
         isAnnually = !isAnnually;
 
         if (isAnnually) {
+          // 1. เลื่อนสวิตช์ไปทางขวา และเปลี่ยนสีพื้นหลังเป็นสีเหลือง
           toggleDot.classList.remove("translate-x-0");
           toggleDot.classList.add("translate-x-5");
+          
+          toggleBtn.classList.remove("bg-[rgb(255,115,66)]"); // ลบสีส้มเดิม
+          toggleBtn.classList.add("bg-yellow-400");            // เพิ่มสีเหลือง (หรือเปลี่ยนเป็นโค้ดสีเหลืองที่ชอบได้ครับ)
 
+          // ... โค้ดเดิมของคุณที่เหลือ (labelMonthly, priceFree, periodFree ฯลฯ) ...
           labelMonthly.classList.remove("text-slate-900", "font-semibold");
           labelMonthly.classList.add("text-slate-400", "font-normal");
 
@@ -964,16 +969,21 @@
 
           priceFree.textContent = priceFree.getAttribute("data-annually");
           pricePremium.textContent = pricePremium.getAttribute("data-annually");
-          priceBusiness.textContent =
-            priceBusiness.getAttribute("data-annually");
+          priceBusiness.textContent = priceBusiness.getAttribute("data-annually");
 
           periodFree.textContent = "/ year";
           periodPremium.textContent = "/ year";
           periodBusiness.textContent = "/ year";
+
         } else {
+          // 2. เลื่อนสวิตช์กลับมาทางซ้าย และเปลี่ยนสีพื้นหลังกลับเป็นสีส้มเดิม
           toggleDot.classList.remove("translate-x-5");
           toggleDot.classList.add("translate-x-0");
+          
+          toggleBtn.classList.remove("bg-yellow-400");            // ลบสีเหลืองออก
+          toggleBtn.classList.add("bg-[rgb(255,115,66)]");       // ใส่สีส้มเดิมกลับมา
 
+          // ... โค้ดเดิมของคุณที่เหลือ (labelAnnually, priceFree, periodFree ฯลฯ) ...
           labelAnnually.classList.remove("text-slate-900", "font-semibold");
           labelAnnually.classList.add("text-slate-400", "font-normal");
 
@@ -982,14 +992,16 @@
 
           priceFree.textContent = priceFree.getAttribute("data-monthly");
           pricePremium.textContent = pricePremium.getAttribute("data-monthly");
-          priceBusiness.textContent =
-            priceBusiness.getAttribute("data-monthly");
+          priceBusiness.textContent = priceBusiness.getAttribute("data-monthly");
 
           periodFree.textContent = "/ month";
           periodPremium.textContent = "/ month";
           periodBusiness.textContent = "/ month";
         }
       });
-    </script>
+    </script> 
+ 
+ 
+ 
   </body>
 </html>
