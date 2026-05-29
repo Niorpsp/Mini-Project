@@ -8,130 +8,178 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body class="font-dm text-[var(--text-dark)]">
-    <section
-      class="flex min-h-screen min-h-[100dvh] flex-col bg-gradient-to-b from-[var(--hero-gradient-start)] to-white md:max-h-[960px] md:min-h-[960px] md:overflow-hidden"
+<section
+  class="relative flex min-h-screen w-full flex-col overflow-x-hidden bg-gradient-to-b from-[var(--hero-gradient-start)] to-white md:max-h-[960px] md:min-h-[960px] md:overflow-hidden"
+>
+  <header class="relative z-30 w-full bg-[var(--nav-bg)]">
+    <nav
+      class="flex items-center justify-between px-5 py-4 sm:px-8 md:px-[150px] md:py-8"
     >
-      <!-- Navigation -->
-      <nav
-        class="flex items-center bg-[var(--nav-bg)] px-5 py-5 sm:px-8 md:px-[150px] md:py-8"
-      >
-        <div class="flex items-center md:gap-40">
-          <section class="flex flex-row items-center gap-2">
-            <img
-              src="image/Logo1.png"
-              alt="Logo-image"
-              class="h-8 w-auto object-contain md:h-auto"
-            />
-            <img
-              src="image/Logo2.png"
-              alt="Logo-name"
-              class="h-5 w-auto object-contain md:h-auto"
-            />
-          </section>
+      <div class="flex items-center md:gap-40">
+        <section class="flex flex-row items-center gap-2">
+          <img
+            src="image/Logo1.png"
+            alt="Logo-image"
+            class="h-8 w-auto object-contain md:h-auto"
+          />
+          <img
+            src="image/Logo2.png"
+            alt="Logo-name"
+            class="h-5 w-auto object-contain md:h-auto"
+          />
+        </section>
 
-          <section class="hidden gap-10 md:flex">
+        <section class="hidden gap-10 md:flex">
           <button
             type="button"
-            class="text-lg font-semibold text-[var(--primary-color)] transition-colors duration-200"
+            class="text-lg text-[var(--text-muted)] transition-colors duration-200 hover:text-[var(--primary-color)] hover:underline"
           >
             Home
           </button>
           <button
             type="button"
-            class="text-lg text-[var(--text-muted)] transition-colors duration-200 hover:text-[var(--primary-color)]"
+            class="text-lg text-[var(--text-muted)] transition-colors duration-200 hover:text-[var(--primary-color)] hover:underline"
           >
             Feature
           </button>
           <button
             type="button"
-            class="text-lg text-[var(--text-muted)] transition-colors duration-200 hover:text-[var(--primary-color)]"
+            class="text-lg text-[var(--text-muted)] transition-colors duration-200 hover:text-[var(--primary-color)] hover:underline"
           >
             Pricing
           </button>
           <button
             type="button"
-            class="text-lg text-[var(--text-muted)] transition-colors duration-200 hover:text-[var(--primary-color)]"
+            class="text-lg text-[var(--text-muted)] transition-colors duration-200 hover:text-[var(--primary-color)] hover:underline"
           >
             Testimonial
           </button>
-          </section>
-        </div>
+        </section>
+      </div>
 
-        <button type="button" class="ml-auto p-1 md:hidden" aria-label="Open menu">
-          <svg class="h-8 w-8 text-slate-800" fill="currentColor" viewBox="0 0 24 24">
-            <path
-              d="M4 4h4v4H4zm6 0h4v4h-4zm6 0h4v4h-4zM4 10h4v4H4zm6 0h4v4h-4zm6 0h4v4h-4zM4 16h4v4H4zm6 0h4v4h-4zm6 0h4v4h-4z"
-            />
-          </svg>
+      <button
+        id="mobile-menu-btn"
+        type="button"
+        class="ml-auto grid grid-cols-2 gap-1.5 p-0.5 md:hidden"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <span class="size-3 rounded-[3px] bg-slate-800"></span>
+        <span class="size-3 rounded-[3px] bg-slate-800"></span>
+        <span class="size-3 rounded-[3px] bg-slate-800"></span>
+        <span class="size-3 rounded-[3px] bg-slate-800"></span>
+      </button>
+
+      <section class="ml-auto hidden items-center gap-4 md:flex">
+        <button
+          type="button"
+          class="h-16 w-[151px] rounded-md bg-[var(--secondary-color)] text-base font-bold text-[var(--text-dark)]"
+        >
+          Register
+        </button>
+        <button
+          type="button"
+          class="h-16 w-[139px] rounded-md bg-[var(--primary-color)] text-base font-bold text-white"
+        >
+          Sign In
+        </button>
+      </section>
+    </nav>
+
+    <div
+      id="mobile-menu"
+      class="overflow-hidden border-t border-orange-200/40 transition-[max-height,opacity] duration-300 ease-in-out md:hidden max-h-0 opacity-0 bg-[var(--nav-bg)] shadow-xl"
+      aria-hidden="true"
+    >
+      <div class="flex flex-col gap-0.5 px-5 pb-6 pt-1.5 sm:px-8">
+        <button
+          type="button"
+          class="mobile-menu-link rounded-md px-2 py-2 text-left text-lg text-[var(--text-muted)] hover:text-[var(--primary-color)]"
+        >
+          Home
+        </button>
+        <button
+          type="button"
+          class="mobile-menu-link rounded-md px-2 py-2 text-left text-lg text-[var(--text-muted)] hover:text-[var(--primary-color)]"
+        >
+          Feature
+        </button>
+        <button
+          type="button"
+          class="mobile-menu-link rounded-md px-2 py-2 text-left text-lg text-[var(--text-muted)] hover:text-[var(--primary-color)]"
+        >
+          Pricing
+        </button>
+        <button
+          type="button"
+          class="mobile-menu-link rounded-md px-2 py-2 text-left text-lg text-[var(--text-muted)] hover:text-[var(--primary-color)]"
+        >
+          Testimonial
         </button>
 
-        <section class="ml-auto hidden items-center gap-4 md:flex">
+        <div class="mt-2 flex flex-col gap-2.5 border-t border-orange-200/40 pt-3">
           <button
             type="button"
-            class="h-16 w-[151px] rounded-md bg-[var(--secondary-color)] text-base font-bold text-[var(--text-dark)]"
+            class="mobile-menu-link h-12 w-full rounded-md bg-[var(--secondary-color)] text-base font-bold text-[var(--text-dark)]"
           >
             Register
           </button>
           <button
             type="button"
-            class="h-16 w-[139px] rounded-md bg-[var(--primary-color)] text-base font-bold text-white"
+            class="mobile-menu-link h-12 w-full rounded-md bg-[var(--primary-color)] text-base font-bold text-white"
           >
             Sign In
           </button>
-        </section>
-      </nav>
-
-      <!-- Hero -->
-      <main
-        class="grid flex-1 grid-cols-1 content-center gap-8 px-5 pb-10 pt-4 sm:px-8 md:mx-auto md:w-full md:max-w-[1920px] md:grid-cols-[minmax(0,620px)_minmax(0,1fr)] md:grid-rows-1 md:items-center md:gap-12 md:px-[150px] md:pb-16 md:pt-0"
-      >
-        <!-- Dashboard (mobile: บน | desktop: ขวา) -->
-        <div
-          class="ml-[-12px] w-full max-w-full justify-self-start md:col-start-2 md:row-start-1 md:w-auto md:justify-self-end"
-        >
-          <img
-            src="image/Group 5880.png"
-            alt="dashboard"
-            class="block h-auto w-full max-w-full object-contain object-left md:max-w-[1000px] md:w-[min(1000px,calc(100vw-300px-420px))] md:object-center"
-            width="1000"
-            height="732"
-          />
         </div>
+      </div>
+    </div>
+  </header>
 
-        <!-- Headline, CTA, brands -->
-        <section
-          class="flex w-full max-w-full flex-col items-start gap-6 text-left md:col-start-1 md:row-start-1 md:gap-10"
-        >
-          <h1
-            class="font-circular text-[36px] font-bold leading-[1.1] text-slate-800 sm:text-[44px] md:text-[64px] lg:text-[70px]"
-          >
-            <span class="block">Best Platform</span>
-            <span class="block">for Monitor</span>
-            <span class="block">Work Flow</span>
-          </h1>
+  <main
+    class="relative z-10 grid flex-1 grid-cols-1 gap-6 px-5 pb-10 pt-4 sm:px-8 md:mx-auto md:w-full md:max-w-[1920px] md:grid-cols-[minmax(0,620px)_minmax(0,1fr)] md:grid-rows-1 md:items-center md:gap-12 md:px-[150px] md:pb-16 md:pt-0"
+  >
+    <div
+      class="w-full max-w-full justify-self-center md:col-start-2 md:row-start-1 md:w-auto md:justify-self-end"
+    >
+      <img
+        src="image/Group 5880.png"
+        alt="dashboard"
+        class="block h-auto w-full max-w-[480px] object-contain md:max-w-[1000px] md:w-[min(1000px,calc(100vw-300px-420px))]"
+        width="1000"
+        height="732"
+      />
+    </div>
 
-          <button
-            type="button"
-            class="h-14 w-[206px] rounded-md bg-[var(--primary-color)] text-base font-bold text-white shadow-lg shadow-orange-500/25 transition-transform hover:scale-105 md:h-16"
-          >
-            Get 15 Day Trial
-          </button>
+    <section
+      class="flex w-full max-w-full flex-col items-start gap-5 text-left md:col-start-1 md:row-start-1 md:gap-10"
+    >
+      <h1
+        class="font-circular text-[32px] sm:text-[40px] font-bold leading-[1.1] text-slate-800 md:text-[64px] lg:text-[70px]"
+      >
+        <span class="block">Best Platform</span>
+        <span class="block">for Monitor</span>
+        <span class="block">Work Flow</span>
+      </h1>
 
-          <div
-            class="grid w-full max-w-[280px] grid-cols-2 justify-items-start gap-x-8 gap-y-8 pt-2 opacity-70 sm:max-w-[300px] md:flex md:max-w-none md:flex-row md:items-center md:justify-start md:gap-10 md:pt-4 lg:gap-[40px]"
-          >
-            <img src="image/brand-04.png" alt="Caley Peace" class="h-7 object-contain sm:h-8" />
-            <img src="image/brand-01.png" alt="Design Studio" class="h-7 object-contain sm:h-8" />
-            <img
-              src="image/brand-06.png"
-              alt="Harrison In9dustry"
-              class="h-7 object-contain sm:h-8"
-            />
-            <img src="image/brand-05.png" alt="Barbecue" class="h-7 object-contain sm:h-8" />
-          </div>
-        </section>
-      </main>
+      <button
+        type="button"
+        class="h-14 w-[206px] rounded-md bg-[var(--primary-color)] text-base font-bold text-white shadow-lg shadow-orange-500/25 transition-transform hover:scale-105 md:h-16"
+      >
+        Get 15 Day Trial
+      </button>
+
+      <div
+        class="grid w-full max-w-[280px] grid-cols-2 justify-items-start gap-x-8 gap-y-6 pt-2 opacity-70 sm:max-w-[300px] md:flex md:max-w-none md:flex-row md:items-center md:justify-start md:gap-10 md:pt-4 lg:gap-[40px]"
+      >
+        <img src="image/brand-04.png" alt="Caley Peace" class="h-6 object-contain sm:h-8" />
+        <img src="image/brand-01.png" alt="Design Studio" class="h-6 object-contain sm:h-8" />
+        <img src="image/brand-06.png" alt="Harrison Industry" class="h-6 object-contain sm:h-8" />
+        <img src="image/brand-05.png" alt="Barbecue" class="h-6 object-contain sm:h-8" />
+      </div>
     </section>
+  </main>
+</section>
   <!-- Jib: Feature section start -->
     <!-- feature -->
     <section class="max-w-7xl mx-auto px-10 py-14">
@@ -322,7 +370,7 @@
           class="grid grid-cols-1 gap-x-1 gap-y-2 sm:grid-cols-3 md:grid-cols-5 max-w-xs sm:max-w-4xl mx-auto"
         >
           <div
-            class="flex items-center justify-center rounded-xl bg-white p-5 shadow-xl border border-slate-100 font-semibold text-slate-400"
+            class="flex items-center justify-center rounded-xl bg-white sm:p-5 p-10 shadow-xl border border-slate-100 font-semibold text-slate-400"
           >
             <img
               src="image_pricing_section/slack.png"
@@ -331,7 +379,7 @@
             />
           </div>
           <div
-            class="flex items-center justify-center rounded-xl bg-white p-5 shadow-xl border border-slate-100 font-black tracking-wider text-slate-300"
+            class="flex items-center justify-center rounded-xl bg-white sm:p-5 p-10 shadow-xl border border-slate-100 font-black tracking-wider text-slate-300"
           >
             <img
               src="image_pricing_section/Netflix.png"
@@ -341,7 +389,7 @@
           </div>
 
           <div
-            class="flex items-center justify-center rounded-xl bg-[rgb(255,115,66)] p-5 shadow-[0_4px_14px_rgba(255,115,66,0.4)] font-bold text-white"
+            class="flex items-center justify-center rounded-xl bg-[rgb(255,115,66)] sm:p-5 p-10 shadow-[0_4px_14px_rgba(255,115,66,0.4)] font-bold text-white"
           >
             <img
               src="image_pricing_section/google_highlight.png"
@@ -351,7 +399,7 @@
           </div>
 
           <div
-            class="flex items-center justify-center rounded-xl bg-white p-5 shadow-xl border border-slate-100 font-medium text-slate-400"
+            class="flex items-center justify-center rounded-xl bg-white sm:p-5 p-10 shadow-xl border border-slate-100 font-medium text-slate-400"
           >
             <img
               src="image_pricing_section/fitbit.png"
@@ -360,7 +408,7 @@
             />
           </div>
           <div
-            class="flex items-center justify-center rounded-xl bg-white p-5 shadow-xl border border-slate-100 font-medium text-slate-400"
+            class="flex items-center justify-center rounded-xl bg-white sm:p-5 p-10 shadow-xl border border-slate-100 font-medium text-slate-400"
           >
             <img
               src="image_pricing_section/aitbnb.png"
@@ -369,7 +417,7 @@
             />
           </div>
           <div
-            class="flex items-center justify-center rounded-xl bg-white p-5 shadow-xl border border-slate-100 font-medium text-slate-400"
+            class="flex items-center justify-center rounded-xl bg-white sm:p-5 p-10 shadow-xl border border-slate-100 font-medium text-slate-400"
           >
             <img
               src="image_pricing_section/aitbnb.png"
@@ -378,7 +426,7 @@
             />
           </div>
           <div
-            class="flex items-center justify-center rounded-xl bg-white p-5 shadow-xl border border-slate-100 font-medium text-slate-400"
+            class="flex items-center justify-center rounded-xl bg-white sm:p-5 p-10 shadow-xl border border-slate-100 font-medium text-slate-400"
           >
             <img
               src="image_pricing_section/fitbit.png"
@@ -387,7 +435,7 @@
             />
           </div>
           <div
-            class="flex items-center justify-center rounded-xl bg-white p-5 shadow-xl border border-slate-100 font-black tracking-wider text-slate-300"
+            class="flex items-center justify-center rounded-xl bg-white sm:p-5 p-10 shadow-xl border border-slate-100 font-black tracking-wider text-slate-300"
           >
             <img
               src="image_pricing_section/Netflix.png"
@@ -396,7 +444,7 @@
             />
           </div>
           <div
-            class="flex items-center justify-center rounded-xl bg-white p-5 shadow-xl border border-slate-100 font-semibold text-slate-400"
+            class="flex items-center justify-center rounded-xl bg-white sm:p-5 p-10 shadow-xl border border-slate-100 font-semibold text-slate-400"
           >
             <img
               src="image_pricing_section/slack.png"
@@ -405,7 +453,7 @@
             />
           </div>
           <div
-            class="flex items-center justify-center rounded-xl bg-white p-5 shadow-xl border border-slate-100 font-bold text-slate-300"
+            class="flex items-center justify-center rounded-xl bg-white sm:p-5 p-10 shadow-xl border border-slate-100 font-bold text-slate-300"
           >
             <img
               src="image_pricing_section/Google.png"
@@ -488,7 +536,7 @@
           class="grid grid-cols-1 gap-8 items-stretch max-w-md mx-auto md:max-w-none md:grid-cols-3"
         >
           <article
-            class="flex flex-col justify-between rounded-2xl bg-white p-8 shadow-sm border border-slate-100 text-left transition hover:shadow-md"
+            class="flex flex-col justify-between rounded-2xl bg-white p-8 sm:shadow-sm shadow-xl border border-slate-100 text-left transition hover:shadow-md"
           >
             <div>
               <h3 class="text-lg font-bold text-slate-900 mb-2">Free Plan</h3>
@@ -536,7 +584,7 @@
           </article>
 
           <article
-            class="flex flex-col justify-between rounded-2xl bg-white p-8 shadow-xl ring-1 ring-black/5 text-left transform md:-translate-y-4 z-10"
+            class="flex flex-col justify-between rounded-2xl bg-white p-8 shadow-xl  ring-1 ring-black/5 text-left transform md:-translate-y-4 z-10"
           >
             <div>
               <h3 class="text-lg font-bold text-slate-900 mb-2">
@@ -586,7 +634,7 @@
           </article>
 
           <article
-            class="flex flex-col justify-between rounded-2xl bg-white p-8 shadow-sm border border-slate-100 text-left transition hover:shadow-md"
+            class="flex flex-col justify-between rounded-2xl bg-white p-8 sm:shadow-sm shadow-xl border border-slate-100 text-left transition hover:shadow-md"
           >
             <div>
               <h3 class="text-lg font-bold text-slate-900 mb-2">
@@ -861,6 +909,37 @@
 
     </section>
     <script>
+      const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const mobileMenuLinks = document.querySelectorAll(".mobile-menu-link");
+
+      function setMobileMenuOpen(open) {
+        if (!mobileMenuBtn || !mobileMenu) return;
+
+        mobileMenuBtn.setAttribute("aria-expanded", String(open));
+        mobileMenuBtn.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+        mobileMenu.setAttribute("aria-hidden", String(!open));
+        mobileMenu.classList.toggle("max-h-0", !open);
+        mobileMenu.classList.toggle("opacity-0", !open);
+        mobileMenu.classList.toggle("max-h-[22rem]", open);
+        mobileMenu.classList.toggle("opacity-100", open);
+      }
+
+      mobileMenuBtn?.addEventListener("click", () => {
+        const isOpen = mobileMenuBtn.getAttribute("aria-expanded") === "true";
+        setMobileMenuOpen(!isOpen);
+      });
+
+      mobileMenuLinks.forEach((link) => {
+        link.addEventListener("click", () => setMobileMenuOpen(false));
+      });
+
+      window.addEventListener("resize", () => {
+        if (window.matchMedia("(min-width: 768px)").matches) {
+          setMobileMenuOpen(false);
+        }
+      });
+
       const toggleBtn = document.getElementById("toggle-pricing");
       const toggleDot = document.getElementById("toggle-dot");
       const labelMonthly = document.getElementById("label-monthly");
@@ -880,9 +959,14 @@
         isAnnually = !isAnnually;
 
         if (isAnnually) {
+          // 1. เลื่อนสวิตช์ไปทางขวา และเปลี่ยนสีพื้นหลังเป็นสีเหลือง
           toggleDot.classList.remove("translate-x-0");
           toggleDot.classList.add("translate-x-5");
+          
+          toggleBtn.classList.remove("bg-[rgb(255,115,66)]"); // ลบสีส้มเดิม
+          toggleBtn.classList.add("bg-yellow-400");            // เพิ่มสีเหลือง (หรือเปลี่ยนเป็นโค้ดสีเหลืองที่ชอบได้ครับ)
 
+          // ... โค้ดเดิมของคุณที่เหลือ (labelMonthly, priceFree, periodFree ฯลฯ) ...
           labelMonthly.classList.remove("text-slate-900", "font-semibold");
           labelMonthly.classList.add("text-slate-400", "font-normal");
 
@@ -891,16 +975,21 @@
 
           priceFree.textContent = priceFree.getAttribute("data-annually");
           pricePremium.textContent = pricePremium.getAttribute("data-annually");
-          priceBusiness.textContent =
-            priceBusiness.getAttribute("data-annually");
+          priceBusiness.textContent = priceBusiness.getAttribute("data-annually");
 
           periodFree.textContent = "/ year";
           periodPremium.textContent = "/ year";
           periodBusiness.textContent = "/ year";
+
         } else {
+          // 2. เลื่อนสวิตช์กลับมาทางซ้าย และเปลี่ยนสีพื้นหลังกลับเป็นสีส้มเดิม
           toggleDot.classList.remove("translate-x-5");
           toggleDot.classList.add("translate-x-0");
+          
+          toggleBtn.classList.remove("bg-yellow-400");            // ลบสีเหลืองออก
+          toggleBtn.classList.add("bg-[rgb(255,115,66)]");       // ใส่สีส้มเดิมกลับมา
 
+          // ... โค้ดเดิมของคุณที่เหลือ (labelAnnually, priceFree, periodFree ฯลฯ) ...
           labelAnnually.classList.remove("text-slate-900", "font-semibold");
           labelAnnually.classList.add("text-slate-400", "font-normal");
 
@@ -909,14 +998,16 @@
 
           priceFree.textContent = priceFree.getAttribute("data-monthly");
           pricePremium.textContent = pricePremium.getAttribute("data-monthly");
-          priceBusiness.textContent =
-            priceBusiness.getAttribute("data-monthly");
+          priceBusiness.textContent = priceBusiness.getAttribute("data-monthly");
 
           periodFree.textContent = "/ month";
           periodPremium.textContent = "/ month";
           periodBusiness.textContent = "/ month";
         }
       });
-    </script>
+    </script> 
+ 
+ 
+ 
   </body>
 </html>
