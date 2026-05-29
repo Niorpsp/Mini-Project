@@ -802,16 +802,16 @@
       <!-- Social -->
 
         <div class="hidden md:flex items-center gap-2 mb-6">
-          <a href="#" class="w-10 h-10 rounded-full bg-[#fff2ed] flex items-center justify-center">
+          <a href="https://www.techupth.com/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-[#fff2ed] flex items-center justify-center">
             <img src="./image/Junior_icon_google.png" alt="Google" class="w-auto h-auto object-contain" />
           </a>
-          <a href="#" class="w-10 h-10 rounded-full bg-[#fff2ed] flex items-center justify-center">
+          <a href="https://www.techupth.com/community" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-[#fff2ed] flex items-center justify-center">
             <img src="./image/Junior_icon_twitter.png" alt="Twitter" class="w-auto h-auto object-contain" />
           </a>
-          <a href="#" class="w-10 h-10 rounded-full bg-[#fff2ed] flex items-center justify-center">
+          <a href="https://www.techupth.com/full-stack-dev-bootcamp" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-[#fff2ed] flex items-center justify-center">
             <img src="./image/Junior_icon_ig.png" alt="Instagram" class="w-auto h-auto object-contain" />
           </a>
-          <a href="#" class="w-10 h-10 rounded-full bg-[#fff2ed] flex items-center justify-center">
+          <a href="https://www.techupth.com/corperate-training" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-[#fff2ed] flex items-center justify-center">
             <img src="./image/Junior_icon_in.png" alt="Linkedin" class="w-auto h-auto object-contain" />
           </a>
         </div>
@@ -886,16 +886,16 @@
     <!-- Mobile social icons placed below columns on small screens -->
 
     <div class="flex md:hidden gap-2 mt-6">
-      <a href="#" class="w-9 h-9 rounded-full bg-[#fff2ed] flex items-center justify-center">
+      <a href="https://www.techupth.com/" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-[#fff2ed] flex items-center justify-center">
         <img src="./image/Junior_icon_google.png" alt="Google" class="w-auto h-auto object-contain" />
       </a>
-      <a href="#" class="w-9 h-9 rounded-full bg-[#fff2ed] flex items-center justify-center">
+      <a href="https://www.techupth.com/community" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-[#fff2ed] flex items-center justify-center">
         <img src="./image/Junior_icon_twitter.png" alt="Twitter" class="w-auto h-auto object-contain" />
       </a>
-      <a href="#" class="w-9 h-9 rounded-full bg-[#fff2ed] flex items-center justify-center">
+      <a href="https://www.techupth.com/full-stack-dev-bootcamp" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-[#fff2ed] flex items-center justify-center">
         <img src="./image/Junior_icon_ig.png" alt="Instagram" class="w-auto h-auto object-contain" />
       </a>
-      <a href="#" class="w-9 h-9 rounded-full bg-[#fff2ed] flex items-center justify-center">
+      <a href="https://www.techupth.com/corperate-training" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-[#fff2ed] flex items-center justify-center">
         <img src="./image/Junior_icon_in.png" alt="Linkedin" class="w-auto h-auto object-contain" />
       </a>
     </div>
@@ -907,6 +907,12 @@
     </section>
 
     </section>
+
+    <button id="back-to-top"
+      class="fixed bottom-5 right-5 hidden h-12 w-12 rounded-full bg-[var(--primary-color)] text-white shadow-lg transition hover:scale-110 z-50 flex items-center justify-center text-[26px] pb-1">
+      ⇧
+    </button>
+
     <script>
       const mobileMenuBtn = document.getElementById("mobile-menu-btn");
       const mobileMenu = document.getElementById("mobile-menu");
@@ -1004,9 +1010,28 @@
           periodBusiness.textContent = "/ month";
         }
       });
+
+      // Back To Top Button
+      const backToTopBtn = document.getElementById("back-to-top");
+
+      if (backToTopBtn) {
+        window.addEventListener("scroll", () => {
+          if (window.scrollY > 300) {
+            backToTopBtn.classList.remove("hidden");
+            backToTopBtn.classList.add("flex");
+          } else {
+            backToTopBtn.classList.remove("flex");
+            backToTopBtn.classList.add("hidden");
+          }
+        });
+
+        backToTopBtn.addEventListener("click", () => {
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        });
+      }
     </script> 
- 
- 
- 
   </body>
 </html>
